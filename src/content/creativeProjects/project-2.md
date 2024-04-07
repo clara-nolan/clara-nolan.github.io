@@ -1,17 +1,19 @@
 ---
-title: 'Voxel-Based Game Engine'
-description: 'A recreation of Minecraft using C++'
+title: 'ASCII Filter'
+description: 'Use your camera to make ASCII Art'
 image:
-    url: '/minecraft.png'
+    url: '/ascii1.png'
     alt: 'A depiction of a pink-ish red sunset'
 worksImage1:
-    url: '/m1.png'
+    url: '/ascii2.png'
     alt: 'Hilly voxel environment'
-worksImage2:
-    url: '/m2.png'
-    alt: 'Pink clouds surrounding sun'
-stack: C++, GLSL, Qt
-website: https://astro-milky-way.netlify.app/
+stack: HTML, CSS, JavaScript
+website: https://editor.p5js.org/kunstpleb/sketches/qfGKWfeDw
 ---
 
-I implemented player physics predominantly using gridmarching to check for blocks in order to determine where to destroy or create. In order to implement caves, I used a mix function to layer 3D perlin noise with 3D simplex noise to create tunnels. Additionally,  I implemented the Day and Night cycle by adding my own palletes for sunrise, morning, midday, sunset, and night. I then created a const variable that represented 10,000 ticks, and this variable allowed me to create 5 different phases throughout the day. I based my sun movement off of each interval along with using sin and cos functions. Lastly, I created the post-processing shaders that appear on screen when the user is in lava or water by creating a switch case that would be activated when a boolean was true or false for lava or water respectively. I layered FBM functions along with 2D noise functions to create these effects. 
+
+In my version of Daniel Shiffman's ASCII art project from The Coding Train, I've introduced several modifications to give it a unique spin, transforming the ASCII art into a Matrix-style "rain" effect. 
+
+Firstly, I adjusted the ASCII character set and the way characters are mapped from the video input. While the original project used a fixed set of characters to represent varying shades of brightness, I've maintained this concept but added a twist by allowing the characters to change over time. This simulates the iconic digital rain from the Matrix films, where text continuously flows down the screen.
+
+To achieve this, I introduced a time-based variable that modifies which character is selected from the density string. Using millis() to get the running time since the program started, I created a time offset that adjusts the character index cyclically. This means as time progresses, the characters displayed for the same pixel brightness level change, creating an effect of falling rain.

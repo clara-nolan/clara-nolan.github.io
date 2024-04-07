@@ -1,5 +1,5 @@
 ---
-title: 'P5.js Star Sc'
+title: 'TBD'
 description: 'A phsyically based path tracer'
 image:
     url: '/minecraft.png'

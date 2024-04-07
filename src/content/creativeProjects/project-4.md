@@ -1,5 +1,5 @@
 ---
-title: 'Custom Shaders'
+title: 'TBD'
 description: 'A collection of post-processing effects and shaders'
 image:
     url: '/minecraft.png'
