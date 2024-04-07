@@ -1,19 +1,17 @@
 ---
-title: 'Project 3'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Realtime Renderer'
+description: 'An Unreal inspired realtime renderer system able to handle subsurface scattering, roughness, and metallic sliders'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/obsidian.png'
+    alt: 'A cube made out obsidian in a well lit room.'
 worksImage1:
-    url: '/image-1.webp'
-    alt: 'first image of your project.'
+    url: '/metal.png'
+    alt: 'A reflective metal sphere.'
 worksImage2:
-    url: '/image-2.webp'
-    alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
+    url: '/gun.png'
+    alt: 'A pistol in a forest environment'
+stack: GLSL, C++, Qt
 website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+In this project, I have implemented a physically-based shader with environment mapping, focusing on the integration of pre-computed irradiance into the plastic-metallic BRDF. I have developed shaders in GLSL, handling varying degrees of roughness and metallicness, and integrating different environmental conditions into the rendering process. For the direct lighting component, I have crafted functions that utilize multiple importance sampling to enhance the realism in material representation, particularly for diffuse and microfacet surfaces. I've also enabled environment map sampling, which adds depth and realism to scenes that lack direct light sources. For the global illumination aspect, I've employed new BSDF-based rays to simulate realistic light interaction and update color accumulation effectively. 

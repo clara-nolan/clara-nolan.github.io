@@ -1,19 +1,17 @@
 ---
-title: 'Project 2'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'Voxel-Based Game Engine'
+description: 'A recreation of Minecraft using C++'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/minecraft.png'
+    alt: 'A depiction of a pink-ish red sunset'
 worksImage1:
-    url: '/image-1.webp'
-    alt: 'first image of your project.'
+    url: '/m1.png'
+    alt: 'Hilly voxel environment'
 worksImage2:
-    url: '/image-2.webp'
-    alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
+    url: '/m2.png'
+    alt: 'Pink clouds surrounding sun'
+stack: C++, GLSL, Qt
 website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+I implemented player physics predominantly using gridmarching to check for blocks in order to determine where to destroy or create. In order to implement caves, I used a mix function to layer 3D perlin noise with 3D simplex noise to create tunnels. Additionally,  I implemented the Day and Night cycle by adding my own palletes for sunrise, morning, midday, sunset, and night. I then created a const variable that represented 10,000 ticks, and this variable allowed me to create 5 different phases throughout the day. I based my sun movement off of each interval along with using sin and cos functions. Lastly, I created the post-processing shaders that appear on screen when the user is in lava or water by creating a switch case that would be activated when a boolean was true or false for lava or water respectively. I layered FBM functions along with 2D noise functions to create these effects. 

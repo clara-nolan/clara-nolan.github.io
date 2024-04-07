@@ -1,14 +1,14 @@
 /* Global styles */
 :root {
-    --background: #26191B; 
+    --background: #584153; 
     --background-light: #fdebf3;
-    --button: #F6ACC8;
+    --button: #478778;
     --text: #fdebf3;
     --text-light: #584153; 
     --text-link: #F6ACC8;
-    --underline: #584153;
-    --header: 'tt-nooks', arial;
-    --body: 'joly-display', arial; 
+    --underline: #478778;
+    --header: 'joly-display', arial; 
+    --body: 'tt-nooks', arial; 
 }
 
 html {

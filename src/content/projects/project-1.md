@@ -1,19 +1,19 @@
 ---
-title: 'Project 1'
-description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
+title: 'PBR Path Tracer'
+description: 'A phsyically based path tracer'
 image:
-    url: '/GitHub.webp'
-    alt: 'GitHub wallpaper'
+    url: '/myCornell.png'
+    alt: 'A rendered image of the Cornell Box'
 worksImage1:
-    url: '/image-1.webp'
+    url: '/customImage1.png'
     alt: 'first image of your project.'
 worksImage2:
-    url: '/image-2.webp'
+    url: '/customImage3.png'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
+stack: OpenGL, GLSL, C++, Qt
 website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus a tortor at molestie. Sed pellentesque leo auctor, auctor lorem nec, venenatis risus. Vivamus commodo ipsum vitae orci finibus, vel porta nunc viverra. In hac habitasse platea dictumst. Nunc pretium, ligula ultricies consequat sollicitudin, enim ex ullamcorper nisl.
+In this project, my primary goal is to implement the Li_Full Integrator, a new light integrator designed to handle both direct and global illumination at each ray intersection. This development aims to minimize noise and enhance brightness in the rendered images. I have introduced a function to calculate direct lighting using multiple importance sampling, specifically tailored for interactions with diffuse and microfacet surfaces. Additionally, I have generated new BSDF-based rays to explore global illumination effects further and updated the color accumulation based on the materials each ray encounters. To add another layer of realism, especially in scenes devoid of direct light sources, I have enabled sampling from the environment map. 
+
+TLDR; a PBR path tracer that handles global illumination, diffuse, specular, and mirror to translucent material.
