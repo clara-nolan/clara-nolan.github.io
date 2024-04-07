@@ -2,14 +2,11 @@
 title: 'Custom Shaders'
 description: 'A collection of post-processing effects and shaders'
 image:
-    url: '/matcap.png'
+    url: '/minecraft.png'
     alt: 'A cube made out obsidian in a well lit room.'
 worksImage1:
     url: '/multi.png'
     alt: 'A reflective metal sphere.'
-worksImage2:
-    url: '/displace.png'
-    alt: 'A pistol in a forest environment'
 stack: GLSL, C++, Qt
 website: https://astro-milky-way.netlify.app/
 ---
