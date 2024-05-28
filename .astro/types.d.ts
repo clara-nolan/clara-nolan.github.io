@@ -126,60 +126,53 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"creativeProjects": {
-"project-10.md": {
-	id: "project-10.md";
-  slug: "project-10";
+"ascii.md": {
+	id: "ascii.md";
+  slug: "ascii";
   body: string;
   collection: "creativeProjects";
   data: InferEntrySchema<"creativeProjects">
 } & { render(): Render[".md"] };
-"project-2.md": {
-	id: "project-2.md";
-  slug: "project-2";
-  body: string;
-  collection: "creativeProjects";
-  data: InferEntrySchema<"creativeProjects">
-} & { render(): Render[".md"] };
-"project-3.md": {
-	id: "project-3.md";
-  slug: "project-3";
-  body: string;
-  collection: "creativeProjects";
-  data: InferEntrySchema<"creativeProjects">
-} & { render(): Render[".md"] };
-"project-4.md": {
-	id: "project-4.md";
-  slug: "project-4";
+"clock.md": {
+	id: "clock.md";
+  slug: "clock";
   body: string;
   collection: "creativeProjects";
   data: InferEntrySchema<"creativeProjects">
 } & { render(): Render[".md"] };
 };
 "projects": {
-"project-1.md": {
-	id: "project-1.md";
-  slug: "project-1";
+"minecraft-game.md": {
+	id: "minecraft-game.md";
+  slug: "minecraft-game";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"project-2.md": {
-	id: "project-2.md";
-  slug: "project-2";
+"path-tracer.md": {
+	id: "path-tracer.md";
+  slug: "path-tracer";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"project-3.md": {
-	id: "project-3.md";
-  slug: "project-3";
+"renderer.md": {
+	id: "renderer.md";
+  slug: "renderer";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
-"project-4.md": {
-	id: "project-4.md";
-  slug: "project-4";
+"shaders.md": {
+	id: "shaders.md";
+  slug: "shaders";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"storybook-game.md": {
+	id: "storybook-game.md";
+  slug: "storybook-game";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

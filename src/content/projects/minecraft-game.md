@@ -1,5 +1,5 @@
 ---
-title: 'Voxel-Based Game Engine'
+title: 'Voxel-Based Game'
 description: 'A recreation of Minecraft using C++'
 image:
     url: '/minecraft.png'
