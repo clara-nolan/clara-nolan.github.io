@@ -149,6 +149,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"mini-maya.md": {
+	id: "mini-maya.md";
+  slug: "mini-maya";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "path-tracer.md": {
 	id: "path-tracer.md";
   slug: "path-tracer";

@@ -1,4 +1,21 @@
 /* Global styles */
+
+@font-face {
+    font-family: 'Redaction';
+    src: url("src/fonts/Redaction_35-Bold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Violet-Sans';
+    src: url("src/fonts/VioletSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --background: #584153; 
     --background-light: #fdebf3;
@@ -7,8 +24,8 @@
     --text-light: #584153; 
     --text-link: #F6ACC8;
     --underline: #478778;
-    --header: 'joly-display', arial; 
-    --body: 'tt-nooks', arial; 
+    --header: 'Redaction', arial; 
+    --body: 'Violet-Sans', serif; 
 }
 
 html {
@@ -35,7 +52,7 @@ h1 {
 }
 
 h2 {
-    text-decoration: underline var(--underline);
+    /* text-decoration: underline var(--underline); */
     text-decoration-thickness: 4px;
     text-underline-offset: 6px;
     font-size: 2.1rem;
@@ -56,35 +73,83 @@ small, li {
 
 /* Navigation Bar */
 .navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 0.8rem;
 }
 
+/* Ensure the title retains its original font and style */
 .navbar__title {
     font-family: var(--header);
     font-size: 1.3rem;
+    position: relative;
 }
 
-.navbar__menu {
-    font-family: var(--body);
-    font-size: 1.1rem;
-    text-align: right;
-}
-
-.navbar__title > a, .navbar__menu > a {
+/* Title hover effect - underline */
+.navbar__title a {
     color: var(--text);
     text-decoration: none;
+    position: relative;
 }
 
-.navbar__menu > a {
-    margin: 0 10px;
+.navbar__title a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--underline);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
-.navbar__title > a:hover, .navbar__menu > a:hover, .navbar__menu > a:focus {
-    text-decoration: underline var(--underline);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 6px;
+.navbar__title a:hover::after, 
+.navbar__title a:focus::after {
+    transform: scaleX(1);
+}
+
+/* Navbar menu (right side) */
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds spacing between items */
+}
+
+.navbar__menu a {
+    font-family: var(--body);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+}
+
+/* Underline effect for menu items */
+.navbar__menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--underline);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar__menu a:hover::after, 
+.navbar__menu a:focus::after {
+    transform: scaleX(1);
+}
+
+/* Align the sun icon properly */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Adjust as needed */
+    height: 24px;
 }
 
 /* Gifs */
@@ -131,7 +196,7 @@ small, li {
 }
 
 /* Cards */
-.card {
+/* .card {
     list-style: none;
     display: flex;
     background-size: 400%;
@@ -168,6 +233,55 @@ small, li {
 
 .card__link:hover {
     transform: scale(1.05);
+} */
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Makes all cards the same height */
+}
+
+.card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures everything inside is centered */
+    text-decoration: none;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Ensures all images are the same size */
+.card__img {
+    width: 250px;  /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the dimensions without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Title & Text Styling */
+/* .card__title,
+.card__txt {
+    margin: 10px 0;
+} */
+
+.card__title {
+    color: var(--text); /* Use your original text color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card__title a {
+    color: inherit; /* Ensures it doesn’t turn blue if it's a link */
+    text-decoration: none;
 }
 
 .link-card-grid {
@@ -175,7 +289,9 @@ small, li {
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
     padding: 0;
+    align-items: stretch; /* Ensures all cards stretch to the same height */
 }
+
 
 /* Button */
 .btn {
