@@ -142,6 +142,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "projects": {
+"hair-tools.md": {
+	id: "hair-tools.md";
+  slug: "hair-tools";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "minecraft-game.md": {
 	id: "minecraft-game.md";
   slug: "minecraft-game";
@@ -173,13 +180,6 @@ declare module 'astro:content' {
 "shaders.md": {
 	id: "shaders.md";
   slug: "shaders";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"storybook-game.md": {
-	id: "storybook-game.md";
-  slug: "storybook-game";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

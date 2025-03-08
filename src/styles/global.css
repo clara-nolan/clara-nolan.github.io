@@ -3,18 +3,25 @@
 @font-face {
     font-family: 'Redaction';
     src: url("src/fonts/Redaction_35-Bold.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'Violet-Sans';
     src: url("src/fonts/VioletSans-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
 }
+
+.jacquard-24-regular {
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .averia-libre-regular {
+    font-family: "Averia Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 :root {
     --background: #584153; 
@@ -24,8 +31,8 @@
     --text-light: #584153; 
     --text-link: #F6ACC8;
     --underline: #478778;
-    --header: 'Redaction', arial; 
-    --body: 'Violet-Sans', serif; 
+    --header: 'Jacquard 24', garamond; 
+    --body: 'Averia Libre', arial; 
 }
 
 html {
@@ -79,10 +86,16 @@ small, li {
     margin-top: 0.8rem;
 }
 
+.navbar__logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Adds spacing between the logo and text */
+}
+
 /* Ensure the title retains its original font and style */
 .navbar__title {
     font-family: var(--header);
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     position: relative;
 }
 
@@ -250,6 +263,7 @@ small, li {
     flex-direction: column;
     align-items: center; /* Ensures everything inside is centered */
     text-decoration: none;
+    color: var(--text);
 }
 
 .card__content {
@@ -257,6 +271,9 @@ small, li {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+     margin-bottom: 5px; /* Reduce bottom margin */
+    font-size: 1.2rem; /* Adjust font size if necessary */
 }
 
 /* Ensures all images are the same size */
@@ -274,13 +291,14 @@ small, li {
 } */
 
 .card__title {
-    color: var(--text); /* Use your original text color */
+    /* color: var(--text); Use your original text color */
     text-decoration: none;
     font-weight: bold;
+    font-family: var(--body);
 }
 
 .card__title a {
-    color: inherit; /* Ensures it doesn’t turn blue if it's a link */
+    /* color: inherit; Ensures it doesn’t turn blue if it's a link */
     text-decoration: none;
 }
 

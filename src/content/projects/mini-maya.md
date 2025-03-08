@@ -1,17 +1,24 @@
 ---
 title: 'Mini-Maya with USD Exporter'
-description: 'An interactive storybook game based off of Alice and Wonderland'
-image:
-    url: '/alice.png'
-    alt: 'A pixel art depiction of Alice from Alice in Wonderland.'
-worksImage1:
-    url: '/alice2.png'
-    alt: 'A pixel art depiction of Alice from Alice in Wonderland inside a painting.'
-worksImage2:
-    url: '/alice3.png'
-    alt: 'A pixel art depiction of Alice from Alice in Wonderland inside a yellow room with a brown chair and table.'
-stack: Aseprite, C#, Unity2D
-website: https://main.dxm6nh3lg8bwg.amplifyapp.com/App/
----
+description: 'Half-Edge Mesh Viewer 
 
-This game is currently in development with a team of 2 other developers. I helped design the overall art direction, contributed to movement control and bug-fixes using Unity and bounding-box checking, and created various pixel art assets.
+
+
+
+
+
+
+'
+image:
+    url: '/dodecahedron.png'
+    alt: 'colorful dodecahedron'
+worksImage1:
+    url: '/maya1.png'
+    alt: ''
+worksImage2:
+    url: '/maya2.png'
+    alt: ''
+stack: C++, QT
+website: NA
+---
+A 3D modeling tool built entirely with C++ and GLSL, featuring mesh operations like Catmull-Clark subdivision, triangulation, vertex deformation, and edge splitting. It can also export the current model to USD format. The program includes basic mesh skinning and deformation capabilities by importing skeletons.

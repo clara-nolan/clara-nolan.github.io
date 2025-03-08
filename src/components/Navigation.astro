@@ -1,14 +1,17 @@
 ---
 import ThemeIcon from './ThemeIcon.astro';
 ---
+
 <div class="navbar">
     <div class="navbar__title">
-        <a href="/">Clara Nolan</a>
+        <a href="/">
+            <img class="navbar__logo" src="/minecraft.png" alt="Logo">
+            Clara Nolan
+        </a>
     </div>
     <div class="navbar__menu">
         <a href="/works/">Projects</a>
-        {<a href="/posts/">Art</a>}
+        <a href="/posts/">Art</a>
         <ThemeIcon />
     </div>
 </div>
-
