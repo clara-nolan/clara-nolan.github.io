@@ -131,58 +131,65 @@ declare module 'astro:content' {
   slug: "ascii";
   body: string;
   collection: "creativeProjects";
-  data: InferEntrySchema<"creativeProjects">
+  data: any
 } & { render(): Render[".md"] };
 "clock.md": {
 	id: "clock.md";
   slug: "clock";
   body: string;
   collection: "creativeProjects";
-  data: InferEntrySchema<"creativeProjects">
+  data: any
 } & { render(): Render[".md"] };
 };
 "projects": {
+"hair-tools copy.md": {
+	id: "hair-tools copy.md";
+  slug: "hair-tools-copy";
+  body: string;
+  collection: "projects";
+  data: any
+} & { render(): Render[".md"] };
 "hair-tools.md": {
 	id: "hair-tools.md";
   slug: "hair-tools";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "minecraft-game.md": {
 	id: "minecraft-game.md";
   slug: "minecraft-game";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "mini-maya.md": {
 	id: "mini-maya.md";
   slug: "mini-maya";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "path-tracer.md": {
 	id: "path-tracer.md";
   slug: "path-tracer";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "renderer.md": {
 	id: "renderer.md";
   slug: "renderer";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 "shaders.md": {
 	id: "shaders.md";
   slug: "shaders";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -194,5 +201,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../src/content/config.js");
+	export type ContentConfig = never;
 }
